@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+	def index
+		@posts = Post.all
+	end
+
+  def show
+		@post = Post.find(params[:id])
+	end
+
+
 end
